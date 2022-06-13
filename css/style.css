@@ -1,0 +1,502 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    color: var(--color-text);
+    background: var(--color-background);
+    position: relative;
+}
+
+ul, li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    margin-bottom: 1.2rem;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--color-text);
+}
+
+/* Utility Styles */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    display: block;
+    width: 100%;
+    max-width: 164px;
+}
+
+.section {
+    padding: 3.2rem 2rem;
+}
+
+.title {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.paragraph {
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1.6rem 2.4rem;
+    border-radius: 0.4rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-cta {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fff;
+    background: var(--color-primary);
+    transition: background 0.25s ease-in-out;
+}
+
+.btn-cta:hover {
+    box-shadow: 0 0.2rem 0.8rem rgba(240, 93, 35, 40%);
+    background: var(--color-primary-dark);
+}
+
+.show-menu {
+    display: flex !important;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 2.4rem;
+    right: 2rem;
+}
+
+/* Navbar Styles */
+.navbar {
+    border-bottom: 1px solid var(--color-surface);
+    width: 100%;
+    color: var(--color-text);
+}
+
+.navbar .navbar-header {
+    padding: 1.6rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .navbar-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.menu-option .menu-link {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color 0.2s ease-in-out;
+}
+
+.menu-option .menu-link:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.navbar #theme-switcher {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1.6rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 50%;
+    background: var(--color-background);
+    cursor: pointer;
+    color: var(--color-text);
+    transition: all 0.4s;
+}
+
+.navbar #theme-switcher:hover {
+    background: var(--color-surface);
+}
+
+.navbar .navbar-header .navbar-toggle {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--color-text);
+    transition: all 0.4s;
+    font-size: 3.2rem;
+    display: none;
+}
+
+/* Home Styles */
+#home {
+    width: 100vw;
+    height: 76vh;
+    background-image: url("../assets/img/driving-lesson.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home .home-container {
+    width: 100%;
+}
+
+#home .home-container .home-title {
+    font-size: 4rem;
+    font-weight: 500;
+    width: 480px;
+    color: #fff;
+    margin-bottom: 4.8rem;
+    text-shadow: 0 0.2rem 0.8rem rgba(16, 16, 16, 20%);
+}
+
+#home .home-container .home-button {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+/* Serviços Styles */
+#servicos .servicos-cards {
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+}
+
+#servicos .servicos-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-background);
+    border-radius: 0.4rem;
+    transition: all 0.4s;
+    width: 100%;
+    height: 380px;
+    padding: 1.6rem;
+    border: 1px solid var(--color-surface);
+    text-align: center;
+}
+
+#servicos .servicos-card:hover {
+    box-shadow: 0 0.2rem 0.8rem rgba(240, 93, 35, 20%);
+    border: 1px solid var(--color-primary);
+}
+
+#servicos .servicos-card i {
+    font-size: 8rem;
+    color: var(--color-primary);
+}
+
+#servicos .servicos-card .servicos-card-title {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--color-text-headline);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#servicos .servicos-card .servicos-card-paragraph {
+    font-size: 1.4rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.2rem;
+}
+
+/* Empresa Styles */
+#empresa .empresa-head {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#empresa .empresa-logo {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Trabalhe Conosco Styles */
+#trabalhe-conosco .trabalhe-conosco-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+#trabalhe-conosco .trabalhe-conosco-content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#trabalhe-conosco .trabalhe-conosco-logo {
+   width: 360px;
+}
+
+#trabalhe-conosco .trabalhe-conosco-button {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color 0.2s ease-in-out;
+    margin-top: 5.6rem
+}
+
+#trabalhe-conosco .trabalhe-conosco-button:hover {
+    color: var(--color-primary);
+}
+
+/* Contato Styles */
+#contato {
+    margin-bottom: 2rem;
+}
+
+#contato .contato-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+#contato .contato-head .contato-logo {
+    width: 100%;
+}
+
+#contato .contato-content p:last-child {
+    text-align: left;
+    margin-bottom: 3.2rem;
+}
+
+#contato .contato-form {
+    width: 100%;
+    margin-top: 1.6rem;
+}
+
+#contato .contato-form .contato-form-group label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-text-headline);
+    margin-bottom: 0.8rem;
+    display: block
+}
+
+#contato .contato-form .contato-form-group input,
+#contato .contato-form .contato-form-group textarea {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-text);
+    border: 1px solid var(--color-surface);
+    background: transparent;
+    border-radius: 0.4rem;
+    padding: 1.2rem;
+    width: 100%;
+    margin-bottom: 1.6rem;
+    transition: all 0.4s;
+    resize: none;
+}
+
+#contato .contato-form .contato-form-group input:focus-within,
+#contato .contato-form .contato-form-group textarea:focus-within {
+    outline: 1px solid var(--color-primary);
+}
+
+/* Footer Styles */
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-surface);
+    color: var(--color-text);
+}
+
+#footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem;
+}
+
+#footer .footer-container .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+#footer .footer-container .footer-content a {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+#footer .footer-container .footer-content .footer-content-text i {
+    display: inline-block;
+    font-size: 1.4rem;
+    margin-right: 0.8rem;
+}
+
+#footer .footer-container .footer-content a:hover {
+    text-decoration: underline;
+}
+
+#footer .footer-social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.6rem;
+}
+
+#footer .footer-social a {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+#footer .footer-copyright {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    padding: 2rem;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+    .navbar .navbar-menu {
+        display: none;
+    }
+
+    .navbar .navbar-header .navbar-toggle {
+        display: block;
+        z-index: 999;
+    }
+
+    .navbar .navbar-menu {
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.6rem;
+        background: var(--color-surface);
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .menu-option .menu-link {
+        font-size: 3.6rem;
+        font-weight: 500;
+        color: var(--color-text);
+        text-decoration: none;
+        transition: all 0.4s;
+    }
+
+    #home .home-container .home-title {
+        font-size: 3.2rem;
+    }
+
+    #servicos .servicos-card {
+        height: 200px;
+        padding: 1.2rem;
+    }
+
+    #contato .contato-head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4rem;
+    }
+
+    #contato .contato-head .contato-logo {
+        margin: 2.4rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 50%;
+    }
+
+    #home .home-container .home-title {
+        font-size: 4rem;
+        max-width: 300px;
+        box-sizing: content-box;
+        text-shadow: 0 0.4rem 1rem rgba(16, 16, 16, 40%);
+    }
+
+    #servicos .servicos-card {
+        height: 300px;
+        padding: 1.6rem;
+    }
+
+    #empresa .empresa-head {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    #trabalhe-conosco .trabalhe-conosco-head {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        gap: 5rem;
+    }
+
+    #trabalhe-conosco .trabalhe-conosco-logo {
+        width: 100%;
+    }
+}
